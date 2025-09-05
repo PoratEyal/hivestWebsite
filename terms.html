@@ -1,316 +1,241 @@
-export type LegalSection = {
-  title: string;
-  paragraphs?: string[];
-  bullets?: string[];
-};
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NetVest – Terms & Conditions</title>
+  <meta name="description" content="NetVest Terms of Service" />
+  <link rel="canonical" href="https://netvest.app/terms.html" />
+  <style>
+    :root{
+      --bg:#000; --fg:#fff; --muted:#bbb; --card:#0e0e0e; --accent:#4cafef; --border:#2b2b2b;
+    }
+    html,body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;}
+    .wrap{max-width:900px; margin:auto; padding:32px;}
+    header{display:flex; gap:12px; align-items:center; justify-content:space-between; margin-bottom:24px;}
+    header a{color:var(--fg); text-decoration:none; border:1px solid var(--border); padding:8px 12px; border-radius:10px; background:#111}
+    header a:hover{background:var(--accent); color:#000}
+    h1{margin:0 0 6px; font-size:32px; color:var(--accent)}
+    .meta{color:var(--muted); margin-bottom:18px}
+    section{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0}
+    h2{margin:0 0 8px; font-size:20px}
+    ul{margin:8px 0 0 18px}
+    footer{margin-top:26px; color:var(--muted); text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <a href="/index.html">← Home</a>
+      </div>
+      <nav>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </header>
 
-export type LegalDoc = {
-  lastUpdated: string; // ISO date
-  sections: LegalSection[];
-};
+    <h1>Terms & Conditions</h1>
+    <div class="meta" id="meta"></div>
+    <div id="content" aria-live="polite"></div>
 
-export const LEGAL = {
-  meta: {
-    companyName: "NetVest",
-    contactEmail: "openvest79@gmail.com",
-    contactAddress: "Hakovsim 45, Tel Aviv, Israel",
-  },
-  terms: {
-    lastUpdated: "2025-08-26",
-    sections: [
-      {
-        title: "Introduction",
-        paragraphs: [
-          "These Terms of Service (the “Terms”) govern your access to and use of the NetVest mobile and web applications, websites, APIs, and related services (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms.",
-          "If you do not agree to these Terms, do not use the Service."
-        ]
-      },
-      {
-        title: "Eligibility",
-        bullets: [
-          "You must be at least 18 years old to use the Service.",
-          "You represent that you have the legal capacity to enter into a binding agreement."
-        ]
-      },
-      {
-        title: "Account Registration and Security",
-        bullets: [
-          "You must provide accurate, current, and complete information when creating an account.",
-          "You are responsible for maintaining the confidentiality of your credentials and for all activities under your account.",
-          "Notify us immediately of any unauthorized use of your account."
-        ]
-      },
-      {
-        title: "No Investment Advice; No Broker-Dealer",
-        paragraphs: [
-          "NetVest provides a social platform for sharing investing-related information and opinions. All information on the Service is for informational purposes only and is not investment advice, an offer, or a solicitation to buy or sell securities.",
-          "NetVest is not a broker-dealer, investment adviser, or fiduciary. You are solely responsible for your decisions. Past performance does not guarantee future results."
-        ]
-      },
-      {
-        title: "Risk Disclosure",
-        paragraphs: [
+    <footer>© <span id="company"></span></footer>
+  </div>
+
+  <script>
+  // ---------- Data (converted from your TS to plain JS) ----------
+  const LEGAL = {
+    meta: {
+      companyName: "NetVest",
+      contactEmail: "support@netvest.app",
+      contactAddress: "Hakovsim 45, Tel Aviv, Israel",
+    },
+    terms: {
+      lastUpdated: "2025-08-26",
+      sections: [
+        { title: "Introduction",
+          paragraphs: [
+            "These Terms of Service (the “Terms”) govern your access to and use of the NetVest mobile and web applications, websites, APIs, and related services (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms.",
+            "If you do not agree to these Terms, do not use the Service."
+          ]
+        },
+        { title: "Eligibility",
+          bullets: [
+            "You must be at least 18 years old to use the Service.",
+            "You represent that you have the legal capacity to enter into a binding agreement."
+          ]
+        },
+        { title: "Account Registration and Security",
+          bullets: [
+            "You must provide accurate, current, and complete information when creating an account.",
+            "You are responsible for maintaining the confidentiality of your credentials and for all activities under your account.",
+            "Notify us immediately of any unauthorized use of your account."
+          ]
+        },
+        { title: "No Investment Advice; No Broker-Dealer",
+          paragraphs: [
+            "NetVest provides a social platform for sharing investing-related information and opinions. All information on the Service is for informational purposes only and is not investment advice, an offer, or a solicitation to buy or sell securities.",
+            "NetVest is not a broker-dealer, investment adviser, or fiduciary. You are solely responsible for your decisions. Past performance does not guarantee future results."
+          ]
+        },
+        { title: "Risk Disclosure",
+          paragraphs: [
             "Investing in securities involves substantial risk of loss and is not suitable for every investor. The value of stocks, cryptocurrencies, and other assets can fluctuate and may fall to zero. You may lose your entire investment.",
             "NetVest is a platform for discussion and information sharing, not a place to receive personalized financial advice. Any content posted by users or NetVest, including opinions, analyses, or data, should not be construed as a recommendation or basis for making an investment decision. You are solely responsible for conducting your own research and due diligence.",
             "Before investing, you should carefully consider your investment objectives, level of experience, and risk appetite. If you have any doubts, you should seek advice from an independent financial advisor."
-        ]
-      },
-      {
-        title: "User Content and License",
-        bullets: [
-          "You retain ownership of content you post (“User Content”).",
-          "You grant NetVest a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, reproduce, modify, adapt, publish, display, and distribute your User Content for operating, improving, and promoting the Service.",
-          "You represent and warrant you have all rights to post your User Content and that it does not violate law or third-party rights."
-        ]
-      },
-      {
-        title: "Copyright Policy",
-        paragraphs: [
+          ]
+        },
+        { title: "User Content and License",
+          bullets: [
+            "You retain ownership of content you post (“User Content”).",
+            "You grant NetVest a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, reproduce, modify, adapt, publish, display, and distribute your User Content for operating, improving, and promoting the Service.",
+            "You represent and warrant you have all rights to post your User Content and that it does not violate law or third-party rights."
+          ]
+        },
+        { title: "Copyright Policy",
+          paragraphs: [
             "NetVest respects the intellectual property rights of others and expects its users to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law. If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible on the Service, please notify our copyright agent with the following information:",
             "Please send infringement notices to our designated agent at openvest79@gmail.com We reserve the right to remove content alleged to be infringing without prior notice and at our sole discretion."
-        ],
-        bullets: [
+          ],
+          bullets: [
             "A physical or electronic signature of a person authorized to act on behalf of the copyright owner.",
             "Identification of the copyrighted work claimed to have been infringed.",
             "Identification of the material that is claimed to be infringing and information reasonably sufficient to permit us to locate the material.",
             "Your contact information, including your address, telephone number, and an email address.",
             "A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.",
             "A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the copyright owner."
-        ]
-      },
-      {
-        title: "Prohibited Conduct",
-        bullets: [
-          "No unlawful, infringing, defamatory, hateful, harassing, or deceptive content or activity.",
-          "No manipulation of markets, coordinated pump-and-dump, or misleading statements about securities.",
-          "No scraping, reverse engineering, or interfering with security and access controls.",
-          "No posting of private or personal information of others without consent."
-        ]
-      },
-      {
-        title: "Community and Moderation",
-        paragraphs: [
-          "We may, but are not obligated to, review or moderate content. We may remove content or suspend accounts for violations, suspected fraud, or risk to users or the Service."
-        ]
-      },
-      {
-        title: "Third-Party Services and Market Data",
-        paragraphs: [
-          "The Service may display third-party content, market data, links, and integrations. NetVest does not endorse or control such third parties and is not responsible for their content, accuracy, or availability."
-        ]
-      },
-      {
-        title: "Linked Brokerage Connections",
-        bullets: [
-          "If you connect a brokerage or financial account through a third-party aggregator (e.g., an account-linking provider), you authorize us to receive portfolio and transaction data as permitted by that provider.",
-          "We do not receive or store your brokerage credentials. Access tokens may be used to sync data.",
-          "Your use of such providers is subject to their terms and privacy practices."
-        ]
-      },
-      {
-        title: "Paid Features and Billing",
-        bullets: [
-          "Some features may require paid subscriptions or one-time purchases.",
-          "Prices, taxes, billing cycles, and cancellation terms are disclosed at purchase time.",
-          "Unless stated otherwise, subscriptions renew automatically until cancelled.",
-          "Refunds are provided only as required by applicable law."
-        ]
-      },
-      {
-        title: "Intellectual Property",
-        bullets: [
-          "NetVest and its licensors own all rights in the Service, including software, trademarks, and branding.",
-          "Except for the rights explicitly granted to you, no license is granted by implication or otherwise."
-        ]
-      },
-      {
-        title: "Feedback",
-        paragraphs: [
-          "If you provide feedback or suggestions, you grant NetVest a perpetual, irrevocable, worldwide, royalty-free license to use and exploit them without restriction."
-        ]
-      },
-      {
-        title: "Privacy",
-        paragraphs: [
-          "Your use of the Service is subject to our Privacy Policy. Please review it to understand how we collect, use, and share personal data."
-        ]
-      },
-      {
-        title: "Disclaimer of Warranties",
-        paragraphs: [
-          "THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
-          "NETVEST DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DATA WILL BE ACCURATE OR CURRENT."
-        ]
-      },
-      {
-        title: "Limitation of Liability",
-        paragraphs: [
-          "TO THE MAXIMUM EXTENT PERMITTED BY LAW, NETVEST AND ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL.",
-          "IN NO EVENT WILL NETVEST’S TOTAL LIABILITY EXCEED THE GREATER OF USD $100 OR THE AMOUNT YOU PAID TO NETVEST IN THE 12 MONTHS PRECEDING THE CLAIM."
-        ]
-      },
-      {
-        title: "Indemnification",
-        paragraphs: [
-          "You will indemnify and hold NetVest harmless from any claims arising out of or related to your use of the Service, your User Content, or your violation of these Terms or law."
-        ]
-      },
-      {
-        title: "Termination",
-        bullets: [
-          "You may stop using the Service at any time.",
-          "We may suspend or terminate access for any reason, including violation of these Terms or risk to the Service.",
-          "Upon termination, provisions intended to survive (e.g., IP, disclaimers, limitations) will survive."
-        ]
-      },
-      {
-        title: "Compliance, Sanctions, and Export",
-        paragraphs: [
-          "You agree to comply with applicable laws, including export controls and sanctions, and not to use the Service in prohibited jurisdictions."
-        ]
-      },
-      {
-        title: "Governing Law and Venue",
-        paragraphs: [
-          "These Terms are governed by the laws of the State of Israel, without regard to conflict-of-law rules.",
-          "Exclusive jurisdiction and venue lie in the competent courts located in Tel Aviv, Israel."
-        ]
-      },
-      {
-        title: "Changes to the Terms",
-        bullets: [
-          "We may update these Terms from time to time.",
-          "If changes are material, we will provide reasonable notice (e.g., in-app notice or email).",
-          "Your continued use after the effective date constitutes acceptance."
-        ]
-      },
-      {
-        title: "Miscellaneous",
-        bullets: [
-          "Severability: If any provision is unenforceable, the remainder remains in effect.",
-          "Assignment: You may not assign these Terms without our consent; we may assign freely.",
-          "Waiver: Failure to enforce a provision is not a waiver.",
-          "Language: Any translation is for convenience; the English version controls."
-        ]
-      },
-      {
-        title: "Contact",
-        paragraphs: [
-          "Questions about these Terms: openvest79@gmail.com"
-        ]
-      }
-    ]
-  } as LegalDoc,
-  privacy: {
-    lastUpdated: "2025-08-26",
-    sections: [
-      {
-        title: "Overview",
-        paragraphs: [
-          "This Privacy Policy explains how NetVest Ltd. (“NetVest”, “we”, “us”) collects, uses, shares, and protects personal data when you use our Service.",
-          "By using the Service, you acknowledge this Policy."
-        ]
-      },
-      {
-        title: "Data We Collect",
-        bullets: [
-          "Account Data: email, password (hashed), display name, profile image, bio.",
-          "Usage and Device Data: app interactions, logs, IP address, device identifiers, OS, app version.",
-          "Content Data: posts, comments, likes, watchlists, portfolios you choose to share.",
-          "Linked Brokerage Data: if you connect via an aggregator, portfolio holdings, transactions, balances, and related metadata.",
-          "Communications: messages you send to us and notifications preferences.",
-          "Cookies and Tracking Data: We use cookies, pixels, and similar technologies to operate and personalize the Service, remember your settings, and analyze usage."
-        ]
-      },
-      {
-        title: "How We Use Data",
-        bullets: [
-          "Provide and improve the Service, personalize content, and maintain safety.",
-          "Authenticate users, prevent fraud, debug, and monitor performance.",
-          "Communicate with you about updates, features, and security notices.",
-          "Comply with legal obligations and enforce our Terms.",
-          "With your consent, send marketing communications you can opt out of at any time.",
-          "Generate Anonymized and Aggregated Data: We may anonymize and aggregate data to perform research, analyze trends, and for any other business purpose."
-        ]
-      },
-      {
-        title: "Legal Bases (GDPR/UK GDPR)",
-        bullets: [
-          "Contract: to provide the Service you request.",
-          "Legitimate Interests: to secure, improve, and grow our Service.",
-          "Consent: for optional features (e.g., marketing, analytics where required).",
-          "Legal Obligation: to comply with the law."
-        ]
-      },
-      {
-        title: "Linked Brokerage Connections",
-        paragraphs: [
-          "If you connect a brokerage account through a third-party aggregator, that provider may receive and process your credentials and data according to its own terms and policies. We do not store your brokerage credentials. We may receive read-only data (e.g., holdings, transactions) to display and analyze within the Service."
-        ]
-      },
-      {
-        title: "Sharing of Data",
-        bullets: [
-          "Service Providers: cloud hosting, analytics, customer support, email delivery, payment/billing.",
-          "Business Transfers: merger, acquisition, or asset sale.",
-          "Legal: to comply with law, enforce agreements, or protect rights, safety, and property.",
-          "With Your Direction: when you choose to share content or connect third-party services."
-        ]
-      },
-      {
-        title: "International Transfers",
-        paragraphs: [
-          "Your data may be processed in countries outside your country of residence. Where required, we use appropriate safeguards, such as Standard Contractual Clauses."
-        ]
-      },
-      {
-        title: "Data Retention",
-        paragraphs: [
-          "We retain personal data for as long as necessary to provide the Service, comply with legal obligations, resolve disputes, and enforce agreements."
-        ]
-      },
-      {
-        title: "Your Rights",
-        bullets: [
-          "Access, correction, deletion, restriction, and portability of your personal data, subject to legal limits.",
-          "Object to processing based on legitimate interests and withdraw consent where applicable.",
-          "You may exercise rights by contacting us at openvest79@gmail.com We will verify your request as required."
-        ]
-      },
-      {
-        title: "California Privacy (CCPA/CPRA)",
-        bullets: [
-          "Categories Collected: identifiers, internet activity, geolocation (approximate), in-app activity, and financial account metadata if you connect it.",
-          "Purposes: as described above (provide, secure, improve, comply).",
-          "Sale/Share: we do not sell personal data. We may “share” identifiers or activity data for cross-context behavioral advertising only with your consent where required; you can opt out.",
-          "Rights: know, delete, correct, opt-out of sale/share, limit use of sensitive personal information, non-discrimination.",
-          "Authorized Agent: California residents may use an agent with a valid power of attorney or verified authorization."
-        ]
-      },
-      {
-        title: "Children",
-        paragraphs: [
-          "The Service is not directed to individuals under 18. We do not knowingly collect data from children. If you believe a child provided data, contact us to remove it."
-        ]
-      },
-      {
-        title: "Security",
-        paragraphs: [
-          "We use administrative, technical, and physical safeguards to protect personal data. However, no system is completely secure."
-        ]
-      },
-      {
-        title: "Third-Party Links",
-        paragraphs: [
-          "Our Service may link to third-party sites or services. Their privacy practices are not governed by this Policy."
-        ]
-      },
-      {
-        title: "Changes to this Policy",
-        paragraphs: [
-          "We may update this Policy from time to time. If changes are material, we will provide reasonable notice. Your continued use after the effective date means you accept the changes."
-        ]
-      }
-    ]
-  } as LegalDoc
-};
+          ]
+        },
+        { title: "Prohibited Conduct",
+          bullets: [
+            "No unlawful, infringing, defamatory, hateful, harassing, or deceptive content or activity.",
+            "No manipulation of markets, coordinated pump-and-dump, or misleading statements about securities.",
+            "No scraping, reverse engineering, or interfering with security and access controls.",
+            "No posting of private or personal information of others without consent."
+          ]
+        },
+        { title: "Community and Moderation",
+          paragraphs: [
+            "We may, but are not obligated to, review or moderate content. We may remove content or suspend accounts for violations, suspected fraud, or risk to users or the Service."
+          ]
+        },
+        { title: "Third-Party Services and Market Data",
+          paragraphs: [
+            "The Service may display third-party content, market data, links, and integrations. NetVest does not endorse or control such third parties and is not responsible for their content, accuracy, or availability."
+          ]
+        },
+        { title: "Linked Brokerage Connections",
+          bullets: [
+            "If you connect a brokerage or financial account through a third-party aggregator (e.g., an account-linking provider), you authorize us to receive portfolio and transaction data as permitted by that provider.",
+            "We do not receive or store your brokerage credentials. Access tokens may be used to sync data.",
+            "Your use of such providers is subject to their terms and privacy practices."
+          ]
+        },
+        { title: "Paid Features and Billing",
+          bullets: [
+            "Some features may require paid subscriptions or one-time purchases.",
+            "Prices, taxes, billing cycles, and cancellation terms are disclosed at purchase time.",
+            "Unless stated otherwise, subscriptions renew automatically until cancelled.",
+            "Refunds are provided only as required by applicable law."
+          ]
+        },
+        { title: "Intellectual Property",
+          bullets: [
+            "NetVest and its licensors own all rights in the Service, including software, trademarks, and branding.",
+            "Except for the rights explicitly granted to you, no license is granted by implication or otherwise."
+          ]
+        },
+        { title: "Feedback",
+          paragraphs: [
+            "If you provide feedback or suggestions, you grant NetVest a perpetual, irrevocable, worldwide, royalty-free license to use and exploit them without restriction."
+          ]
+        },
+        { title: "Privacy",
+          paragraphs: [
+            "Your use of the Service is subject to our Privacy Policy. Please review it to understand how we collect, use, and share personal data."
+          ]
+        },
+        { title: "Disclaimer of Warranties",
+          paragraphs: [
+            "THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
+            "NETVEST DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DATA WILL BE ACCURATE OR CURRENT."
+          ]
+        },
+        { title: "Limitation of Liability",
+          paragraphs: [
+            "TO THE MAXIMUM EXTENT PERMITTED BY LAW, NETVEST AND ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL.",
+            "IN NO EVENT WILL NETVEST’S TOTAL LIABILITY EXCEED THE GREATER OF USD $100 OR THE AMOUNT YOU PAID TO NETVEST IN THE 12 MONTHS PRECEDING THE CLAIM."
+          ]
+        },
+        { title: "Indemnification",
+          paragraphs: [
+            "You will indemnify and hold NetVest harmless from any claims arising out of or related to your use of the Service, your User Content, or your violation of these Terms or law."
+          ]
+        },
+        { title: "Termination",
+          bullets: [
+            "You may stop using the Service at any time.",
+            "We may suspend or terminate access for any reason, including violation of these Terms or risk to the Service.",
+            "Upon termination, provisions intended to survive (e.g., IP, disclaimers, limitations) will survive."
+          ]
+        },
+        { title: "Compliance, Sanctions, and Export",
+          paragraphs: [
+            "You agree to comply with applicable laws, including export controls and sanctions, and not to use the Service in prohibited jurisdictions."
+          ]
+        },
+        { title: "Governing Law and Venue",
+          paragraphs: [
+            "These Terms are governed by the laws of the State of Israel, without regard to conflict-of-law rules.",
+            "Exclusive jurisdiction and venue lie in the competent courts located in Tel Aviv, Israel."
+          ]
+        },
+        { title: "Changes to the Terms",
+          bullets: [
+            "We may update these Terms from time to time.",
+            "If changes are material, we will provide reasonable notice (e.g., in-app notice or email).",
+            "Your continued use after the effective date constitutes acceptance."
+          ]
+        },
+        { title: "Miscellaneous",
+          bullets: [
+            "Severability: If any provision is unenforceable, the remainder remains in effect.",
+            "Assignment: You may not assign these Terms without our consent; we may assign freely.",
+            "Waiver: Failure to enforce a provision is not a waiver.",
+            "Language: Any translation is for convenience; the English version controls."
+          ]
+        },
+        { title: "Contact",
+          paragraphs: [
+            "Questions about these Terms: openvest79@gmail.com"
+          ]
+        }
+      ]
+    }
+  };
+
+  // ---------- Render ----------
+  const $ = (s, p=document)=>p.querySelector(s);
+  $("#company").textContent = LEGAL.meta.companyName;
+  $("#meta").textContent = `Last updated: ${LEGAL.terms.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail} • ${LEGAL.meta.contactAddress}`;
+
+  const root = $("#content");
+  LEGAL.terms.sections.forEach(sec=>{
+    const el = document.createElement("section");
+    const h2 = document.createElement("h2");
+    h2.textContent = sec.title;
+    el.appendChild(h2);
+
+    (sec.paragraphs||[]).forEach(t=>{
+      const p = document.createElement("p"); p.textContent = t; el.appendChild(p);
+    });
+    if (sec.bullets && sec.bullets.length){
+      const ul = document.createElement("ul");
+      sec.bullets.forEach(b=>{ const li=document.createElement("li"); li.textContent=b; ul.appendChild(li); });
+      el.appendChild(ul);
+    }
+    root.appendChild(el);
+  });
+  </script>
+</body>
+</html>
