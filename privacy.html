@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NetVest – Privacy Policy</title>
+  <meta name="description" content="NetVest Privacy Policy" />
+  <link rel="canonical" href="https://netvest.app/privacy.html" />
+  <style>
+    :root{ --bg:#000; --fg:#fff; --muted:#bbb; --card:#0e0e0e; --accent:#4cafef; --border:#2b2b2b; }
+    html,body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;}
+    .wrap{max-width:900px; margin:auto; padding:32px;}
+    header{display:flex; gap:12px; align-items:center; justify-content:space-between; margin-bottom:24px;}
+    header a{color:var(--fg); text-decoration:none; border:1px solid var(--border); padding:8px 12px; border-radius:10px; background:#111}
+    header a:hover{background:var(--accent); color:#000}
+    h1{margin:0 0 6px; font-size:32px; color:var(--accent)}
+    .meta{color:var(--muted); margin-bottom:18px}
+    section{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0}
+    h2{margin:0 0 8px; font-size:20px}
+    ul{margin:8px 0 0 18px}
+    footer{margin-top:26px; color:var(--muted); text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <a href="/index.html">← Home</a>
+      </div>
+      <nav>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+      </nav>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <div class="meta" id="meta"></div>
+    <div id="content" aria-live="polite"></div>
+
+    <footer>© <span id="company"></span></footer>
+  </div>
+
+  <script>
+  const LEGAL = {
+    meta: {
+      companyName: "NetVest",
+      contactEmail: "openvest79@gmail.com",
+      contactAddress: "Hakovsim 45, Tel Aviv, Israel",
+    },
+    privacy: {
+      lastUpdated: "2025-08-26",
+      sections: [
+        { title: "Overview",
+          paragraphs: [
+            "This Privacy Policy explains how NetVest Ltd. (“NetVest”, “we”, “us”) collects, uses, shares, and protects personal data when you use our Service.",
+            "By using the Service, you acknowledge this Policy."
+          ]
+        },
+        { title: "Data We Collect",
+          bullets: [
+            "Account Data: email, password (hashed), display name, profile image, bio.",
+            "Usage and Device Data: app interactions, logs, IP address, device identifiers, OS, app version.",
+            "Content Data: posts, comments, likes, watchlists, portfolios you choose to share.",
+            "Linked Brokerage Data: if you connect via an aggregator, portfolio holdings, transactions, balances, and related metadata.",
+            "Communications: messages you send to us and notifications preferences.",
+            "Cookies and Tracking Data: We use cookies, pixels, and similar technologies to operate and personalize the Service, remember your settings, and analyze usage."
+          ]
+        },
+        { title: "How We Use Data",
+          bullets: [
+            "Provide and improve the Service, personalize content, and maintain safety.",
+            "Authenticate users, prevent fraud, debug, and monitor performance.",
+            "Communicate with you about updates, features, and security notices.",
+            "Comply with legal obligations and enforce our Terms.",
+            "With your consent, send marketing communications you can opt out of at any time.",
+            "Generate Anonymized and Aggregated Data: We may anonymize and aggregate data to perform research, analyze trends, and for any other business purpose."
+          ]
+        },
+        { title: "Legal Bases (GDPR/UK GDPR)",
+          bullets: [
+            "Contract: to provide the Service you request.",
+            "Legitimate Interests: to secure, improve, and grow our Service.",
+            "Consent: for optional features (e.g., marketing, analytics where required).",
+            "Legal Obligation: to comply with the law."
+          ]
+        },
+        { title: "Linked Brokerage Connections",
+          paragraphs: [
+            "If you connect a brokerage account through a third-party aggregator, that provider may receive and process your credentials and data according to its own terms and policies. We do not store your brokerage credentials. We may receive read-only data (e.g., holdings, transactions) to display and analyze within the Service."
+          ]
+        },
+        { title: "Sharing of Data",
+          bullets: [
+            "Service Providers: cloud hosting, analytics, customer support, email delivery, payment/billing.",
+            "Business Transfers: merger, acquisition, or asset sale.",
+            "Legal: to comply with law, enforce agreements, or protect rights, safety, and property.",
+            "With Your Direction: when you choose to share content or connect third-party services."
+          ]
+        },
+        { title: "International Transfers",
+          paragraphs: [
+            "Your data may be processed in countries outside your country of residence. Where required, we use appropriate safeguards, such as Standard Contractual Clauses."
+          ]
+        },
+        { title: "Data Retention",
+          paragraphs: [
+            "We retain personal data for as long as necessary to provide the Service, comply with legal obligations, resolve disputes, and enforce agreements."
+          ]
+        },
+        { title: "Your Rights",
+          bullets: [
+            "Access, correction, deletion, restriction, and portability of your personal data, subject to legal limits.",
+            "Object to processing based on legitimate interests and withdraw consent where applicable.",
+            "You may exercise rights by contacting us at openvest79@gmail.com We will verify your request as required."
+          ]
+        },
+        { title: "California Privacy (CCPA/CPRA)",
+          bullets: [
+            "Categories Collected: identifiers, internet activity, geolocation (approximate), in-app activity, and financial account metadata if you connect it.",
+            "Purposes: as described above (provide, secure, improve, comply).",
+            "Sale/Share: we do not sell personal data. We may “share” identifiers or activity data for cross-context behavioral advertising only with your consent where required; you can opt out.",
+            "Rights: know, delete, correct, opt-out of sale/share, limit use of sensitive personal information, non-discrimination.",
+            "Authorized Agent: California residents may use an agent with a valid power of attorney or verified authorization."
+          ]
+        },
+        { title: "Children",
+          paragraphs: [
+            "The Service is not directed to individuals under 18. We do not knowingly collect data from children. If you believe a child provided data, contact us to remove it."
+          ]
+        },
+        { title: "Security",
+          paragraphs: [
+            "We use administrative, technical, and physical safeguards to protect personal data. However, no system is completely secure."
+          ]
+        },
+        { title: "Third-Party Links",
+          paragraphs: [
+            "Our Service may link to third-party sites or services. Their privacy practices are not governed by this Policy."
+          ]
+        },
+        { title: "Changes to this Policy",
+          paragraphs: [
+            "We may update this Policy from time to time. If changes are material, we will provide reasonable notice. Your continued use after the effective date means you accept the changes."
+          ]
+        }
+      ]
+    }
+  };
+
+  const $ = (s, p=document)=>p.querySelector(s);
+  $("#company").textContent = LEGAL.meta.companyName;
+  $("#meta").textContent = `Last updated: ${LEGAL.privacy.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail} • ${LEGAL.meta.contactAddress}`;
+
+  const root = $("#content");
+  LEGAL.privacy.sections.forEach(sec=>{
+    const el = document.createElement("section");
+    const h2 = document.createElement("h2");
+    h2.textContent = sec.title;
+    el.appendChild(h2);
+
+    (sec.paragraphs||[]).forEach(t=>{
+      const p = document.createElement("p"); p.textContent = t; el.appendChild(p);
+    });
+    if (sec.bullets && sec.bullets.length){
+      const ul = document.createElement("ul");
+      sec.bullets.forEach(b=>{ const li=document.createElement("li"); li.textContent=b; ul.appendChild(li); });
+      el.appendChild(ul);
+    }
+    root.appendChild(el);
+  });
+  </script>
+</body>
+</html>
