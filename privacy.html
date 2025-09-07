@@ -148,7 +148,7 @@
 
   const $ = (s, p=document)=>p.querySelector(s);
   $("#company").textContent = LEGAL.meta.companyName;
-  $("#meta").textContent = `Last updated: ${LEGAL.privacy.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail} • ${LEGAL.meta.contactAddress}`;
+  $("#meta").textContent = `Last updated: ${LEGAL.privacy.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail}`;
 
   const root = $("#content");
   LEGAL.privacy.sections.forEach(sec=>{
