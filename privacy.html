@@ -28,7 +28,7 @@
         <a href="/index.html">← Home</a>
       </div>
       <nav>
-        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/privacy.html" aria-current="page">Privacy Policy</a>
         <a href="/terms.html">Terms</a>
       </nav>
     </header>
@@ -41,105 +41,83 @@
   </div>
 
   <script>
+  // Minimal, store-aligned privacy content
   const LEGAL = {
     meta: {
-      companyName: "NetVest",
+      companyName: "NetVest Ltd.",
       contactEmail: "support@netvest.app",
+      contactAddress: "Hakovsim 45, Tel Aviv, Israel"
     },
     privacy: {
       lastUpdated: "2025-08-26",
       sections: [
-        { title: "Overview",
+        {
+          title: "Overview",
           paragraphs: [
-            "This Privacy Policy explains how NetVest Ltd. (“NetVest”, “we”, “us”) collects, uses, shares, and protects personal data when you use our Service.",
-            "By using the Service, you acknowledge this Policy."
+            "NetVest Ltd. (\"NetVest\", \"we\", \"us\") respects your privacy. This Policy explains what data we collect, how we use it, and your choices."
           ]
         },
-        { title: "Data We Collect",
+        {
+          title: "Data We Collect",
           bullets: [
-            "Account Data: email, password (hashed), display name, profile image, bio.",
-            "Usage and Device Data: app interactions, logs, IP address, device identifiers, OS, app version.",
-            "Content Data: posts, comments, likes, watchlists, portfolios you choose to share.",
-            "Linked Brokerage Data: if you connect via an aggregator, portfolio holdings, transactions, balances, and related metadata.",
-            "Communications: messages you send to us and notifications preferences.",
-            "Cookies and Tracking Data: We use cookies, pixels, and similar technologies to operate and personalize the Service, remember your settings, and analyze usage."
+            "Account data: email, password (hashed), display name, profile image.",
+            "Usage and device data: in-app interactions, logs, IP address, device info.",
+            "Content you create: posts, comments, watchlists, portfolios.",
+            "Brokerage data (if you connect): holdings, transactions, balances, via a third-party provider.",
+            "Communications: messages you send us and notification preferences.",
+            "Cookies/Tracking: used for sign-in, personalization, and analytics."
           ]
         },
-        { title: "How We Use Data",
+        {
+          title: "How We Use Data",
           bullets: [
-            "Provide and improve the Service, personalize content, and maintain safety.",
-            "Authenticate users, prevent fraud, debug, and monitor performance.",
-            "Communicate with you about updates, features, and security notices.",
-            "Comply with legal obligations and enforce our Terms.",
-            "With your consent, send marketing communications you can opt out of at any time.",
-            "Generate Anonymized and Aggregated Data: We may anonymize and aggregate data to perform research, analyze trends, and for any other business purpose."
+            "Provide and improve the service.",
+            "Authenticate, secure, prevent fraud, and debug.",
+            "Communicate updates and provide support.",
+            "Comply with legal requirements.",
+            "With consent where required: marketing or analytics."
           ]
         },
-        { title: "Legal Bases (GDPR/UK GDPR)",
+        {
+          title: "Sharing of Data",
           bullets: [
-            "Contract: to provide the Service you request.",
-            "Legitimate Interests: to secure, improve, and grow our Service.",
-            "Consent: for optional features (e.g., marketing, analytics where required).",
-            "Legal Obligation: to comply with the law."
+            "Service providers (hosting, analytics, support, email).",
+            "Legal compliance or protection of rights and safety.",
+            "Business transfers (merger, acquisition, or asset sale).",
+            "At your direction (e.g., sharing content or connecting third-party services)."
           ]
         },
-        { title: "Linked Brokerage Connections",
+        {
+          title: "Data Retention & Deletion",
           paragraphs: [
-            "If you connect a brokerage account through a third-party aggregator, that provider may receive and process your credentials and data according to its own terms and policies. We do not store your brokerage credentials. We may receive read-only data (e.g., holdings, transactions) to display and analyze within the Service."
+            "We retain personal data while your account is active.",
+            "You can delete your account any time in the app (Profile → Settings → Delete account) or at https://netvest.app/delete.",
+            "After deletion, most data is removed within 30 days unless the law requires longer retention."
           ]
         },
-        { title: "Sharing of Data",
-          bullets: [
-            "Service Providers: cloud hosting, analytics, customer support, email delivery, payment/billing.",
-            "Business Transfers: merger, acquisition, or asset sale.",
-            "Legal: to comply with law, enforce agreements, or protect rights, safety, and property.",
-            "With Your Direction: when you choose to share content or connect third-party services."
-          ]
-        },
-        { title: "International Transfers",
+        {
+          title: "Your Rights",
           paragraphs: [
-            "Your data may be processed in countries outside your country of residence. Where required, we use appropriate safeguards, such as Standard Contractual Clauses."
+            "You may request access, correction, deletion, or withdraw consent where applicable. Contact us at support@netvest.app. We may need to verify your request."
           ]
         },
-        { title: "Data Retention",
+        {
+          title: "Security",
           paragraphs: [
-            "We retain personal data for as long as necessary to provide the Service, comply with legal obligations, resolve disputes, and enforce agreements."
+            "We use technical and organizational safeguards to protect personal data. No system is 100% secure."
           ]
         },
-        { title: "Your Rights",
-          bullets: [
-            "Access, correction, deletion, restriction, and portability of your personal data, subject to legal limits.",
-            "Object to processing based on legitimate interests and withdraw consent where applicable.",
-            "You may exercise rights by contacting us at support@netvest.app We will verify your request as required."
-          ]
-        },
-        { title: "California Privacy (CCPA/CPRA)",
-          bullets: [
-            "Categories Collected: identifiers, internet activity, geolocation (approximate), in-app activity, and financial account metadata if you connect it.",
-            "Purposes: as described above (provide, secure, improve, comply).",
-            "Sale/Share: we do not sell personal data. We may “share” identifiers or activity data for cross-context behavioral advertising only with your consent where required; you can opt out.",
-            "Rights: know, delete, correct, opt-out of sale/share, limit use of sensitive personal information, non-discrimination.",
-            "Authorized Agent: California residents may use an agent with a valid power of attorney or verified authorization."
-          ]
-        },
-        { title: "Children",
+        {
+          title: "Children",
           paragraphs: [
-            "The Service is not directed to individuals under 18. We do not knowingly collect data from children. If you believe a child provided data, contact us to remove it."
+            "Our service is not directed to individuals under 18 and we do not knowingly collect data from children."
           ]
         },
-        { title: "Security",
+        {
+          title: "Contact",
           paragraphs: [
-            "We use administrative, technical, and physical safeguards to protect personal data. However, no system is completely secure."
-          ]
-        },
-        { title: "Third-Party Links",
-          paragraphs: [
-            "Our Service may link to third-party sites or services. Their privacy practices are not governed by this Policy."
-          ]
-        },
-        { title: "Changes to this Policy",
-          paragraphs: [
-            "We may update this Policy from time to time. If changes are material, we will provide reasonable notice. Your continued use after the effective date means you accept the changes."
+            "Data Controller: NetVest Ltd., Hakovsim 45, Tel Aviv, Israel.",
+            "Contact: support@netvest.app."
           ]
         }
       ]
