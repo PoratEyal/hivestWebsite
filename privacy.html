@@ -18,6 +18,12 @@
     section{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0}
     h2{margin:0 0 8px; font-size:20px}
     ul{margin:8px 0 0 18px}
+    .cta{display:flex; justify-content:center}
+    .btn{
+      display:inline-block; padding:12px 16px; border:1px solid var(--border);
+      border-radius:12px; background:#111; color:var(--fg); text-decoration:none; font-weight:600
+    }
+    .btn:hover{background:var(--accent); color:#000}
     footer{margin-top:26px; color:var(--muted); text-align:center}
   </style>
 </head>
@@ -30,12 +36,22 @@
       <nav>
         <a href="/privacy.html" aria-current="page">Privacy Policy</a>
         <a href="/terms.html">Terms</a>
+        <a href="/delete.html">Delete Account</a>
       </nav>
     </header>
 
     <h1>Privacy Policy</h1>
     <div class="meta" id="meta"></div>
     <div id="content" aria-live="polite"></div>
+
+    <!-- Optional prominent delete button -->
+    <section>
+      <h2>Delete Your Account</h2>
+      <p>If you wish to delete your account and associated personal data, you can do so at any time.</p>
+      <div class="cta">
+        <a class="btn" href="/delete.html">Go to Delete Account</a>
+      </div>
+    </section>
 
     <footer>© <span id="company"></span></footer>
   </div>
