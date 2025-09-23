@@ -39,7 +39,6 @@
     <div class="meta" id="meta"></div>
     <div id="content" aria-live="polite"></div>
 
-    <!-- Optional prominent delete button -->
     <section>
       <h2>Delete Your Account</h2>
       <p>If you wish to delete your account and associated personal data, you can do so at any time.</p>
@@ -52,80 +51,135 @@
   </div>
 
   <script>
-  // Minimal, store-aligned privacy content
+  // Updated, store-aligned privacy content
   const LEGAL = {
     meta: {
-      companyName: "Hivest",
-      contactEmail: "support@hivest.app"
+      companyName: "Hivest Ltd.",
+      contactEmail: "support@hivest.app",
+      contactAddress: "Hakovsim 45, Tel Aviv, Israel"
     },
     privacy: {
-      lastUpdated: "2025-08-26",
+      lastUpdated: "2025-09-23",
       sections: [
         {
           title: "Overview",
           paragraphs: [
-            "Hivest (\"Hivest\", \"we\", \"us\") respects your privacy. This Policy explains what data we collect, how we use it, and your choices."
+            "This Privacy Policy explains how Hivest Ltd. (\"Hivest\", \"we\", \"us\") collects, uses, shares, and protects personal data when you use our Service.",
+            "By using the Service, you acknowledge this Policy."
           ]
         },
         {
           title: "Data We Collect",
           bullets: [
-            "Account data: email, password (hashed), display name, profile image.",
-            "Usage and device data: in-app interactions, logs, IP address, device info.",
-            "Content you create: posts, comments, watchlists, portfolios.",
-            "Communications: messages you send us and notification preferences.",
-            "Cookies/Tracking: used for sign-in, personalization, and analytics."
+            "Account Data: email, password (hashed), display name, profile image, bio.",
+            "Usage and Device Data: app interactions, logs, IP address, device identifiers, operating system, app version.",
+            "Content Data: posts, comments, likes, watchlists, and portfolios you choose to share.",
+            "Linked Brokerage Data: if you connect via an aggregator, we may receive read-only portfolio holdings, transactions, balances, and related metadata.",
+            "Communications: messages you send to us and your notification preferences.",
+            "Cookies and Tracking Data: cookies, pixels, and similar technologies to operate, personalize, remember settings, and analyze usage.",
+            "Reports and Flags: reports submitted or received about content or accounts, including reporter and target IDs, timestamps, and reasons.",
+            "Enforcement Records: actions we take (e.g., removals, suspensions, blocks), appeal submissions and outcomes.",
+            "Safety Signals: automated content-safety scores, keyword matches, and other indicators used to detect policy violations."
           ]
         },
         {
           title: "How We Use Data",
           bullets: [
-            "Provide and improve the service.",
-            "Authenticate, secure, prevent fraud, and debug.",
-            "Communicate updates and provide support.",
-            "Comply with legal requirements.",
-            "With consent where required: marketing or analytics."
+            "Provide and improve the Service, personalize content, and maintain safety.",
+            "Authenticate users, prevent fraud, debug, and monitor performance.",
+            "Communicate with you about updates, features, and security notices.",
+            "Comply with legal obligations and enforce our Terms.",
+            "With your consent, send marketing communications you can opt out of at any time.",
+            "Generate anonymized and aggregated data for research, trend analysis, and other business purposes.",
+            "Enforce safety policies, investigate reports, remove objectionable content, and protect users and the Service."
+          ]
+        },
+        {
+          title: "Legal Bases (GDPR/UK GDPR)",
+          bullets: [
+            "Contract: to provide the Service you request.",
+            "Legitimate Interests: to secure, improve, and grow our Service.",
+            "Consent: for optional features such as marketing and analytics where required.",
+            "Legal Obligation: to comply with applicable laws."
+          ]
+        },
+        {
+          title: "Linked Brokerage Connections",
+          paragraphs: [
+            "If you connect a brokerage account through a third-party aggregator, that provider processes your credentials according to its own terms and policies.",
+            "We do not store your brokerage credentials. We may receive read-only data (such as holdings and transactions) to display and analyze within the Service."
           ]
         },
         {
           title: "Sharing of Data",
           bullets: [
-            "Service providers (hosting, analytics, support, email).",
-            "Legal compliance or protection of rights and safety.",
-            "Business transfers (merger, acquisition, or asset sale).",
-            "At your direction (e.g., sharing content or connecting third-party services)."
+            "Service Providers: cloud hosting, analytics, customer support, email delivery, and payment/billing.",
+            "Business Transfers: in the event of a merger, acquisition, or asset sale.",
+            "Legal: to comply with law, enforce agreements, or protect rights, safety, and property.",
+            "With Your Direction: when you choose to share content or connect third-party services.",
+            "Trust & Safety and Law Enforcement: we may share necessary data with service providers assisting moderation and with authorities where required by law or to prevent harm."
           ]
         },
         {
-          title: "Data Retention & Deletion",
+          title: "International Transfers",
           paragraphs: [
-            "We retain personal data while your account is active.",
-            "You can delete your account any time in the app (Profile → Settings → Delete account) or at https://hivest.app/delete.html.",
-            "After deletion, most data is removed within 30 days unless the law requires longer retention."
+            "Your data may be processed in countries outside your country of residence. Where required, we use appropriate safeguards, such as Standard Contractual Clauses."
+          ]
+        },
+        {
+          title: "Data Retention",
+          paragraphs: [
+            "We retain personal data for as long as necessary to provide the Service, comply with legal obligations, resolve disputes, and enforce agreements.",
+            "Reports and enforcement records are retained for as long as reasonably necessary to enforce our policies and comply with legal obligations."
           ]
         },
         {
           title: "Your Rights",
-          paragraphs: [
-            "You may request access, correction, deletion, or withdraw consent where applicable. Contact us at support@hivest.app. We may need to verify your request."
+          bullets: [
+            "Access, correction, deletion, restriction, and portability of your personal data, subject to legal limits.",
+            "Object to processing based on legitimate interests and withdraw consent where applicable.",
+            "You may exercise rights by contacting us at support@hivest.app. We will verify your request as required."
           ]
         },
         {
-          title: "Security",
-          paragraphs: [
-            "We use technical and organizational safeguards to protect personal data. No system is 100% secure."
+          title: "California Privacy (CCPA/CPRA)",
+          bullets: [
+            "Categories Collected: identifiers, internet activity, approximate geolocation, in-app activity, and financial account metadata if you connect it.",
+            "Purposes: as described above including providing, securing, improving, and complying.",
+            "Sale/Share: we do not sell personal data. We may “share” identifiers or activity data for cross-context behavioral advertising only with your consent where required, and you can opt out.",
+            "Rights: know, delete, correct, opt out of sale/share, limit use of sensitive personal information, and non-discrimination.",
+            "Authorized Agent: California residents may use an agent with a valid power of attorney or verified authorization."
           ]
         },
         {
           title: "Children",
           paragraphs: [
-            "Our service is not directed to individuals under 18 and we do not knowingly collect data from children."
+            "The Service is not directed to individuals under 18. We do not knowingly collect data from children. If you believe a child provided data, contact us to remove it."
+          ]
+        },
+        {
+          title: "Security",
+          paragraphs: [
+            "We use administrative, technical, and physical safeguards to protect personal data. However, no system is completely secure."
+          ]
+        },
+        {
+          title: "Third-Party Links",
+          paragraphs: [
+            "Our Service may link to third-party sites or services. Their privacy practices are not governed by this Policy."
+          ]
+        },
+        {
+          title: "Changes to this Policy",
+          paragraphs: [
+            "We may update this Policy from time to time. If changes are material, we will provide reasonable notice. Your continued use after the effective date means you accept the changes."
           ]
         },
         {
           title: "Contact",
           paragraphs: [
-            "Contact: support@hivest.app."
+            "Contact: support@hivest.app",
+            "Address: Hakovsim 45, Tel Aviv, Israel"
           ]
         }
       ]
@@ -134,7 +188,8 @@
 
   const $ = (s, p=document)=>p.querySelector(s);
   $("#company").textContent = LEGAL.meta.companyName;
-  $("#meta").textContent = `Last updated: ${LEGAL.privacy.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail}`;
+  $("#meta").textContent =
+    `Last updated: ${LEGAL.privacy.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail} • ${LEGAL.meta.contactAddress}`;
 
   const root = $("#content");
   LEGAL.privacy.sections.forEach(sec=>{
