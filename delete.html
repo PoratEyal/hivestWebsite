@@ -1,3 +1,4 @@
+<!-- delete.html -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,23 +8,39 @@
   <meta name="description" content="Delete your Hivest account and personal data." />
   <link rel="canonical" href="https://hivest.app/delete.html" />
   <style>
-    :root{ --bg:#000; --fg:#fff; --muted:#bbb; --card:#0e0e0e; --accent:#4cafef; --border:#2b2b2b; }
-    html,body{margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;}
-    .wrap{max-width:700px; margin:auto; padding:32px;}
-    header{margin-bottom:24px;}
-    header a{color:var(--fg); text-decoration:none; border:1px solid var(--border); padding:8px 12px; border-radius:10px; background:#111}
-    header a:hover{background:var(--accent); color:#000}
-    h1{margin:0 0 12px; font-size:28px; color:var(--accent)}
-    section{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px; margin:14px 0}
-    footer{margin-top:26px; color:var(--muted); text-align:center}
+    :root{ --bg:#06090f; --elev:#0d1522cc; --fg:#f6f7fb; --muted:#a9b3c3; --accent:#4cafef; --hairline:rgba(255,255,255,.08); --radius:18px }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:760px;margin:auto;padding:28px}
+    header{position:sticky;top:0;background:linear-gradient(180deg,#06090f 60%,#06090f00);backdrop-filter:blur(8px);z-index:10}
+    .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline)}
+    .brand{font-weight:800}
+    .btn{display:inline-flex;padding:8px 12px;border-radius:10px;background:transparent}
+    .btn:hover{background:rgba(255,255,255,.06)}
+    h1{margin:18px 0 12px;font-size:30px;background:linear-gradient(90deg,var(--accent),#7fd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    section{background:var(--elev);border-radius:var(--radius);padding:20px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.04)}
+    ul{margin:8px 0 0 18px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .cta a{display:inline-block;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.06);font-weight:700}
+    .cta a:hover{background:linear-gradient(90deg,var(--accent),#7fd0ff);color:#00131a}
+    footer{margin-top:26px;color:var(--muted);text-align:center}
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f7f9fc;--elev:#ffffffcc;--fg:#0b111a;--muted:#495469;--hairline:rgba(0,0,0,.06)}
+      section{box-shadow:0 8px 26px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.8)}
+      .btn:hover{background:rgba(0,0,0,.05)}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a href="/index.html">← Home</a>
-    </header>
+  <header>
+    <div class="wrap row">
+      <div class="brand"><a href="/index.html">Hivest</a></div>
+      <a class="btn" href="/privacy.html">Privacy</a>
+    </div>
+  </header>
 
+  <div class="wrap">
     <h1>Delete Your Account</h1>
 
     <section>
@@ -37,6 +54,10 @@
         <li><strong>In the app:</strong> Go to <em>Profile → Settings → Delete account</em>.</li>
         <li><strong>By request:</strong> Email us at <a href="mailto:support@hivest.app">support@hivest.app</a> using the email linked to your account. We may ask you to verify your identity.</li>
       </ul>
+      <div class="cta" style="margin-top:12px">
+        <a href="mailto:support@hivest.app">Email Support</a>
+        <a href="/contact.html">Contact Page</a>
+      </div>
     </section>
 
     <section>
@@ -44,7 +65,7 @@
       <p>If you have questions before deleting your account, please contact us at <a href="mailto:support@hivest.app">support@hivest.app</a>.</p>
     </section>
 
-    <footer>© Hivest</footer>
+    <footer>© Hivest Ltd.</footer>
   </div>
 </body>
 </html>
