@@ -5,43 +5,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hivest – Terms of Service</title>
-  <meta name="description" content="Hivest Terms of Service">
-  <link rel="canonical" href="https://hivest.app/terms.html">
-  <meta name="theme-color" content="#0a121c">
+  <meta name="description" content="Hivest Terms of Service" />
+  <link rel="canonical" href="https://hivest.app/terms.html" />
   <style>
-    :root{--bg:#0a121c;--panel:#0f1724;--card:#0c1420;--fg:#eaf2ff;--muted:#a5b4c7;--line:#1f2a3a;--accent:#49c0ff;--accent-2:#22e3a5;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35)}
+    :root{
+      --bg:#06090f; --panel:#0b111a; --elev:#0d1522cc; --fg:#f6f7fb; --muted:#a9b3c3; --accent:#4cafef; --hairline:rgba(255,255,255,.08); --radius:18px;
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;background:linear-gradient(180deg,#08101a 0%,#0a121c 100%);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
-    a{color:inherit}
-    .wrap{max-width:980px;margin:auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#0f1826 0%,#0b1421 100%);box-shadow:var(--shadow);position:sticky;top:16px}
-    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .brand img{width:32px;height:32px}
-    .brand strong{font-size:18px;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .navlink{padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:#0b1523;text-decoration:none}
-    .navlink:hover{background:linear-gradient(90deg,rgba(73,192,255,.15),rgba(34,227,165,.15))}
-    h1{margin:18px 0 6px;font-size:36px;line-height:1.15;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
-    .meta{color:var(--muted);margin-bottom:16px}
-    section{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:14px 0}
+    html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1000px;margin:auto;padding:28px}
+    header{position:sticky;top:0;background:linear-gradient(180deg,#06090f 60%,#06090f00);backdrop-filter:blur(8px);z-index:10}
+    .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline)}
+    .brand{font-weight:800}
+    .links{display:flex;gap:10px}
+    .btn{display:inline-flex;padding:8px 12px;border-radius:10px;background:transparent}
+    .btn:hover{background:rgba(255,255,255,.06)}
+    h1{margin:18px 0 6px;font-size:34px;background:linear-gradient(90deg,var(--accent),#7fd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .meta{color:var(--muted);margin-bottom:18px}
+    section{background:var(--elev);border-radius:var(--radius);padding:18px 20px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.04)}
     h2{margin:0 0 8px;font-size:20px}
     ul{margin:8px 0 0 18px}
-    footer{margin:26px 0 8px;color:var(--muted);text-align:center}
+    footer{margin-top:26px;color:var(--muted);text-align:center}
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f7f9fc;--elev:#ffffffcc;--fg:#0b111a;--muted:#495469;--hairline:rgba(0,0,0,.06)}
+      section{box-shadow:0 8px 26px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.8)}
+      .btn:hover{background:rgba(0,0,0,.05)}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="/index.html">
-        <img src="/logo.png" alt="Hivest logo">
-        <strong>Hivest</strong>
-      </a>
-      <a class="navlink" href="/privacy.html">Privacy</a>
-    </header>
+  <header>
+    <div class="wrap row">
+      <div class="brand"><a href="/index.html">Hivest</a></div>
+      <nav class="links">
+        <a class="btn" href="/privacy.html">Privacy</a>
+        <a class="btn" href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <div class="wrap">
     <h1>Terms of Service</h1>
     <div class="meta" id="meta"></div>
     <div id="content" aria-live="polite"></div>
-
     <footer>© <span id="company"></span></footer>
   </div>
 
@@ -51,147 +58,46 @@
     terms: {
       lastUpdated: "2025-09-23",
       sections: [
-        { title: "Introduction", paragraphs: [
-          "These Terms of Service (the “Terms”) govern your access to and use of the Hivest mobile and web applications, websites (including https://hivest.app/), APIs, and related services (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms.",
-          "If you do not agree to these Terms, do not use the Service."
-        ]},
-        { title: "Eligibility", bullets: [
-          "You must be at least 18 years old to use the Service.",
-          "You represent that you have the legal capacity to enter into a binding agreement."
-        ]},
-        { title: "Account Registration and Security", bullets: [
-          "You must provide accurate, current, and complete information when creating an account.",
-          "You are responsible for maintaining the confidentiality of your credentials and for all activities under your account.",
-          "Notify us immediately of any unauthorized use of your account."
-        ]},
-        { title: "No Investment Advice; No Broker-Dealer", paragraphs: [
-          "Hivest provides a social platform for sharing investing-related information and opinions. All information on the Service is for informational purposes only and is not investment advice, an offer, or a solicitation to buy or sell securities.",
-          "Hivest is not a broker-dealer, investment adviser, or fiduciary. You are solely responsible for your decisions. Past performance does not guarantee future results."
-        ]},
-        { title: "Risk Disclosure", paragraphs: [
-          "Investing in securities involves substantial risk of loss and is not suitable for every investor. The value of stocks, cryptocurrencies, and other assets can fluctuate and may fall to zero. You may lose your entire investment.",
-          "Hivest is a platform for discussion and information sharing, not a place to receive personalized financial advice. Any content posted by users or Hivest, including opinions, analyses, or data, should not be construed as a recommendation or basis for making an investment decision. You are solely responsible for conducting your own research and due diligence.",
-          "Before investing, you should carefully consider your investment objectives, level of experience, and risk appetite. If you have any doubts, you should seek advice from an independent financial advisor."
-        ]},
-        { title: "User Content and License", bullets: [
-          "You retain ownership of content you post (“User Content”).",
-          "You grant Hivest a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, reproduce, modify, adapt, publish, display, and distribute your User Content for operating, improving, and promoting the Service.",
-          "You represent and warrant you have all rights to post your User Content and that it does not violate law or third-party rights."
-        ]},
-        { title: "Copyright Policy", paragraphs: [
-          "Hivest respects the intellectual property rights of others and expects its users to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law. If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible on the Service, please notify our copyright agent with the following information:",
-          "Please send infringement notices to our designated agent at support@hivest.app We reserve the right to remove content alleged to be infringing without prior notice and at our sole discretion."
-        ], bullets: [
-          "A physical or electronic signature of a person authorized to act on behalf of the copyright owner.",
-          "Identification of the copyrighted work claimed to have been infringed.",
-          "Identification of the material that is claimed to be infringing and information reasonably sufficient to permit us to locate the material.",
-          "Your contact information, including your address, telephone number, and an email address.",
-          "A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.",
-          "A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the copyright owner."
-        ]},
-        { title: "Prohibited Conduct", bullets: [
-          "No unlawful, infringing, defamatory, hateful, harassing, or deceptive content or activity.",
-          "No manipulation of markets, coordinated pump-and-dump, or misleading statements about securities.",
-          "No scraping, reverse engineering, or interfering with security and access controls.",
-          "No posting of private or personal information of others without consent."
-        ]},
-        { title: "User-Generated Content Safety & Zero Tolerance", paragraphs: [
-          "We have zero tolerance for objectionable content or abusive behavior on the Service. Objectionable content includes, without limitation, hate speech, harassment, threats or incitement of violence, sexual or pornographic content, exploitation, self-harm content, illegal activity, doxxing, and any content that violates law or the rights of others."
-        ], bullets: [
-          "You may not post, share, or transmit objectionable content.",
-          "We may remove content and restrict or terminate accounts at our sole discretion to keep the Service safe."
-        ]},
-        { title: "Reporting, Moderation, and 24-Hour Response", paragraphs: [
-          "The Service provides in-app mechanisms for reporting (flagging) objectionable content and accounts. We review actionable reports and take appropriate action—such as content removal, account suspension or termination—within 24 hours of receiving a report, or sooner where required by law.",
-          "Actions may include removing content without prior notice, limiting features, or ejecting the offending user. We may notify law enforcement where we believe there is a risk of harm or illegal activity."
-        ]},
-        { title: "User Blocking and Safety Controls", bullets: [
-          "You may block other users. Blocked users cannot follow you or send you direct messages, and their content will be hidden from you within the Service.",
-          "You can unblock at any time via your account settings."
-        ]},
-        { title: "Content Filtering and Appeals", paragraphs: [
-          "We use automated and manual measures to detect and filter objectionable content (e.g., keyword filters and machine learning classifiers). These measures are not perfect and may result in false positives or negatives.",
-          "If you believe your content or account was moderated in error, you may contact support@hivest.app to appeal."
-        ]},
-        { title: "Community and Moderation", paragraphs: [
-          "We may, but are not obligated to, review or moderate content. We may remove content or suspend accounts for violations, suspected fraud, or risk to users or the Service."
-        ]},
-        { title: "Third-Party Services and Market Data", paragraphs: [
-          "The Service may display third-party content, market data, links, and integrations. Hivest does not endorse or control such third parties and is not responsible for their content, accuracy, or availability."
-        ]},
-        { title: "Linked Brokerage Connections", bullets: [
-          "If you connect a brokerage or financial account through a third-party aggregator (e.g., an account-linking provider), you authorize us to receive portfolio and transaction data as permitted by that provider.",
-          "We do not receive or store your brokerage credentials. Access tokens may be used to sync data.",
-          "Your use of such providers is subject to their terms and privacy practices."
-        ]},
-        { title: "Paid Features and Billing", bullets: [
-          "Some features may require paid subscriptions or one-time purchases.",
-          "Prices, taxes, billing cycles, and cancellation terms are disclosed at purchase time.",
-          "Unless stated otherwise, subscriptions renew automatically until cancelled.",
-          "Refunds are provided only as required by applicable law."
-        ]},
-        { title: "Intellectual Property", bullets: [
-          "Hivest and its licensors own all rights in the Service, including software, trademarks, and branding.",
-          "Except for the rights explicitly granted to you, no license is granted by implication or otherwise."
-        ]},
-        { title: "Feedback", paragraphs: [
-          "If you provide feedback or suggestions, you grant Hivest a perpetual, irrevocable, worldwide, royalty-free license to use and exploit them without restriction."
-        ]},
-        { title: "Privacy", paragraphs: [
-          "Your use of the Service is subject to our Privacy Policy. Please review it to understand how we collect, use, and share personal data."
-        ]},
-        { title: "Disclaimer of Warranties", paragraphs: [
-          "THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.",
-          "HIVEST DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DATA WILL BE ACCURATE OR CURRENT."
-        ]},
-        { title: "Limitation of Liability", paragraphs: [
-          "TO THE MAXIMUM EXTENT PERMITTED BY LAW, HIVEST AND ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL.",
-          "IN NO EVENT WILL HIVEST’S TOTAL LIABILITY EXCEED THE GREATER OF USD $100 OR THE AMOUNT YOU PAID TO HIVEST IN THE 12 MONTHS PRECEDING THE CLAIM."
-        ]},
-        { title: "Indemnification", paragraphs: [
-          "You will indemnify and hold Hivest harmless from any claims arising out of or related to your use of the Service, your User Content, or your violation of these Terms or law."
-        ]},
-        { title: "Termination", bullets: [
-          "You may stop using the Service at any time.",
-          "We may suspend or terminate access for any reason, including violation of these Terms or risk to the Service.",
-          "Upon termination, provisions intended to survive (e.g., IP, disclaimers, limitations) will survive."
-        ]},
-        { title: "Compliance, Sanctions, and Export", paragraphs: [
-          "You agree to comply with applicable laws, including export controls and sanctions, and not to use the Service in prohibited jurisdictions."
-        ]},
-        { title: "Governing Law and Venue", paragraphs: [
-          "These Terms are governed by the laws of the State of Israel, without regard to conflict-of-law rules.",
-          "Exclusive jurisdiction and venue lie in the competent courts located in Tel Aviv, Israel."
-        ]},
-        { title: "Changes to the Terms", bullets: [
-          "We may update these Terms from time to time.",
-          "If changes are material, we will provide reasonable notice (e.g., in-app notice or email).",
-          "Your continued use after the effective date constitutes acceptance."
-        ]},
-        { title: "Miscellaneous", bullets: [
-          "Severability: If any provision is unenforceable, the remainder remains in effect.",
-          "Assignment: You may not assign these Terms without our consent; we may assign freely.",
-          "Waiver: Failure to enforce a provision is not a waiver.",
-          "Language: Any translation is for convenience; the English version controls."
-        ]},
-        { title: "Contact", paragraphs: [
-          "Questions about these Terms: support@hivest.app",
-          "Address: Hakovsim 45, Tel Aviv, Israel"
-        ]}
+        { title: "Introduction", paragraphs: ["These Terms of Service (the “Terms”) govern your access to and use of the Hivest mobile and web applications, websites (including https://hivest.app/), APIs, and related services (collectively, the “Service”). By accessing or using the Service, you agree to be bound by these Terms.","If you do not agree to these Terms, do not use the Service."] },
+        { title: "Eligibility", bullets: ["You must be at least 18 years old to use the Service.","You represent that you have the legal capacity to enter into a binding agreement."] },
+        { title: "Account Registration and Security", bullets: ["You must provide accurate, current, and complete information when creating an account.","You are responsible for maintaining the confidentiality of your credentials and for all activities under your account.","Notify us immediately of any unauthorized use of your account."] },
+        { title: "No Investment Advice; No Broker-Dealer", paragraphs: ["Hivest provides a social platform for sharing investing-related information and opinions. All information on the Service is for informational purposes only and is not investment advice, an offer, or a solicitation to buy or sell securities.","Hivest is not a broker-dealer, investment adviser, or fiduciary. You are solely responsible for your decisions. Past performance does not guarantee future results."] },
+        { title: "Risk Disclosure", paragraphs: ["Investing in securities involves substantial risk of loss and is not suitable for every investor. The value of stocks, cryptocurrencies, and other assets can fluctuate and may fall to zero. You may lose your entire investment.","Hivest is a platform for discussion and information sharing, not a place to receive personalized financial advice. Any content posted by users or Hivest, including opinions, analyses, or data, should not be construed as a recommendation or basis for making an investment decision. You are solely responsible for conducting your own research and due diligence.","Before investing, you should carefully consider your investment objectives, level of experience, and risk appetite. If you have any doubts, you should seek advice from an independent financial advisor."] },
+        { title: "User Content and License", bullets: ["You retain ownership of content you post (“User Content”).","You grant Hivest a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to host, store, reproduce, modify, adapt, publish, display, and distribute your User Content for operating, improving, and promoting the Service.","You represent and warrant you have all rights to post your User Content and that it does not violate law or third-party rights."] },
+        { title: "Copyright Policy", paragraphs: ["Hivest respects the intellectual property rights of others and expects its users to do the same. We will respond to notices of alleged copyright infringement that comply with applicable law. If you believe that your copyrighted work has been copied in a way that constitutes copyright infringement and is accessible on the Service, please notify our copyright agent with the following information:","Please send infringement notices to our designated agent at support@hivest.app We reserve the right to remove content alleged to be infringing without prior notice and at our sole discretion."], bullets: ["A physical or electronic signature of a person authorized to act on behalf of the copyright owner.","Identification of the copyrighted work claimed to have been infringed.","Identification of the material that is claimed to be infringing and information reasonably sufficient to permit us to locate the material.","Your contact information, including your address, telephone number, and an email address.","A statement that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law.","A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the copyright owner."] },
+        { title: "Prohibited Conduct", bullets: ["No unlawful, infringing, defamatory, hateful, harassing, or deceptive content or activity.","No manipulation of markets, coordinated pump-and-dump, or misleading statements about securities.","No scraping, reverse engineering, or interfering with security and access controls.","No posting of private or personal information of others without consent."] },
+        { title: "User-Generated Content Safety & Zero Tolerance", paragraphs: ["We have zero tolerance for objectionable content or abusive behavior on the Service. Objectionable content includes, without limitation, hate speech, harassment, threats or incitement of violence, sexual or pornographic content, exploitation, self-harm content, illegal activity, doxxing, and any content that violates law or the rights of others."], bullets: ["You may not post, share, or transmit objectionable content.","We may remove content and restrict or terminate accounts at our sole discretion to keep the Service safe."] },
+        { title: "Reporting, Moderation, and 24-Hour Response", paragraphs: ["The Service provides in-app mechanisms for reporting (flagging) objectionable content and accounts. We review actionable reports and take appropriate action—such as content removal, account suspension or termination—within 24 hours of receiving a report, or sooner where required by law.","Actions may include removing content without prior notice, limiting features, or ejecting the offending user. We may notify law enforcement where we believe there is a risk of harm or illegal activity."] },
+        { title: "User Blocking and Safety Controls", bullets: ["You may block other users. Blocked users cannot follow you or send you direct messages, and their content will be hidden from you within the Service.","You can unblock at any time via your account settings."] },
+        { title: "Content Filtering and Appeals", paragraphs: ["We use automated and manual measures to detect and filter objectionable content (e.g., keyword filters and machine learning classifiers). These measures are not perfect and may result in false positives or negatives.","If you believe your content or account was moderated in error, you may contact support@hivest.app to appeal."] },
+        { title: "Community and Moderation", paragraphs: ["We may, but are not obligated to, review or moderate content. We may remove content or suspend accounts for violations, suspected fraud, or risk to users or the Service."] },
+        { title: "Third-Party Services and Market Data", paragraphs: ["The Service may display third-party content, market data, links, and integrations. Hivest does not endorse or control such third parties and is not responsible for their content, accuracy, or availability."] },
+        { title: "Linked Brokerage Connections", bullets: ["If you connect a brokerage or financial account through a third-party aggregator (e.g., an account-linking provider), you authorize us to receive portfolio and transaction data as permitted by that provider.","We do not receive or store your brokerage credentials. Access tokens may be used to sync data.","Your use of such providers is subject to their terms and privacy practices."] },
+        { title: "Paid Features and Billing", bullets: ["Some features may require paid subscriptions or one-time purchases.","Prices, taxes, billing cycles, and cancellation terms are disclosed at purchase time.","Unless stated otherwise, subscriptions renew automatically until cancelled.","Refunds are provided only as required by applicable law."] },
+        { title: "Intellectual Property", bullets: ["Hivest and its licensors own all rights in the Service, including software, trademarks, and branding.","Except for the rights explicitly granted to you, no license is granted by implication or otherwise."] },
+        { title: "Feedback", paragraphs: ["If you provide feedback or suggestions, you grant Hivest a perpetual, irrevocable, worldwide, royalty-free license to use and exploit them without restriction."] },
+        { title: "Privacy", paragraphs: ["Your use of the Service is subject to our Privacy Policy. Please review it to understand how we collect, use, and share personal data."] },
+        { title: "Disclaimer of Warranties", paragraphs: ["THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.","HIVEST DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED OR ERROR-FREE, OR THAT DATA WILL BE ACCURATE OR CURRENT."] },
+        { title: "Limitation of Liability", paragraphs: ["TO THE MAXIMUM EXTENT PERMITTED BY LAW, HIVEST AND ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL.","IN NO EVENT WILL HIVEST’S TOTAL LIABILITY EXCEED THE GREATER OF USD $100 OR THE AMOUNT YOU PAID TO HIVEST IN THE 12 MONTHS PRECEDING THE CLAIM."] },
+        { title: "Indemnification", paragraphs: ["You will indemnify and hold Hivest harmless from any claims arising out of or related to your use of the Service, your User Content, or your violation of these Terms or law."] },
+        { title: "Termination", bullets: ["You may stop using the Service at any time.","We may suspend or terminate access for any reason, including violation of these Terms or risk to the Service.","Upon termination, provisions intended to survive (e.g., IP, disclaimers, limitations) will survive."] },
+        { title: "Compliance, Sanctions, and Export", paragraphs: ["You agree to comply with applicable laws, including export controls and sanctions, and not to use the Service in prohibited jurisdictions."] },
+        { title: "Governing Law and Venue", paragraphs: ["These Terms are governed by the laws of the State of Israel, without regard to conflict-of-law rules.","Exclusive jurisdiction and venue lie in the competent courts located in Tel Aviv, Israel."] },
+        { title: "Changes to the Terms", bullets: ["We may update these Terms from time to time.","If changes are material, we will provide reasonable notice (e.g., in-app notice or email).","Your continued use after the effective date constitutes acceptance."] },
+        { title: "Miscellaneous", bullets: ["Severability: If any provision is unenforceable, the remainder remains in effect.","Assignment: You may not assign these Terms without our consent; we may assign freely.","Waiver: Failure to enforce a provision is not a waiver.","Language: Any translation is for convenience; the English version controls."] },
+        { title: "Contact", paragraphs: ["Questions about these Terms: support@hivest.app","Address: Hakovsim 45, Tel Aviv, Israel"] }
       ]
     }
   };
-
   const $ = (s,p=document)=>p.querySelector(s);
   $("#company").textContent = LEGAL.meta.companyName;
   $("#meta").textContent = `Last updated: ${LEGAL.terms.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail} • ${LEGAL.meta.contactAddress}`;
-
   const root = $("#content");
   LEGAL.terms.sections.forEach(sec=>{
     const el=document.createElement("section");
-    const h2=document.createElement("h2");h2.textContent=sec.title;el.appendChild(h2);
-    (sec.paragraphs||[]).forEach(t=>{const p=document.createElement("p");p.textContent=t;el.appendChild(p)});
-    if(sec.bullets&&sec.bullets.length){const ul=document.createElement("ul");sec.bullets.forEach(b=>{const li=document.createElement("li");li.textContent=b;ul.appendChild(li)});el.appendChild(ul)}
+    const h2=document.createElement("h2"); h2.textContent=sec.title; el.appendChild(h2);
+    (sec.paragraphs||[]).forEach(t=>{ const p=document.createElement("p"); p.textContent=t; el.appendChild(p); });
+    if(sec.bullets&&sec.bullets.length){ const ul=document.createElement("ul"); sec.bullets.forEach(b=>{ const li=document.createElement("li"); li.textContent=b; ul.appendChild(li); }); el.appendChild(ul); }
     root.appendChild(el);
   });
   </script>
