@@ -1,65 +1,177 @@
-<!-- privacy.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hivest – Privacy Policy</title>
-  <meta name="description" content="Hivest Privacy Policy" />
-  <link rel="canonical" href="https://hivest.app/privacy.html" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Hivest</title>
+  <meta name="description" content="Hivest Privacy Policy">
+  <link rel="canonical" href="https://hivest.app/privacy.html">
+  <link rel="icon" href="assets/logoApp2.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
   <style>
-    :root{ --bg:#06090f; --elev:#0d1522cc; --fg:#f6f7fb; --muted:#a9b3c3; --accent:#4cafef; --hairline:rgba(255,255,255,.08); --radius:18px }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1000px;margin:auto;padding:28px}
-    header{position:sticky;top:0;background:linear-gradient(180deg,#06090f 60%,#06090f00);backdrop-filter:blur(8px);z-index:10}
-    .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline)}
-    .brand{font-weight:800}
-    .links{display:flex;gap:10px}
-    .btn{display:inline-flex;padding:8px 12px;border-radius:10px;background:transparent}
-    .btn:hover{background:rgba(255,255,255,.06)}
-    h1{margin:18px 0 6px;font-size:34px;background:linear-gradient(90deg,var(--accent),#7fd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .meta{color:var(--muted);margin-bottom:18px}
-    section{background:var(--elev);border-radius:var(--radius);padding:18px 20px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.04)}
-    h2{margin:0 0 8px;font-size:20px}
-    ul{margin:8px 0 0 18px}
-    .cta{display:flex;justify-content:center}
-    .btn2{display:inline-block;padding:12px 16px;border-radius:12px;background:rgba(255,255,255,.06);font-weight:700}
-    .btn2:hover{background:linear-gradient(90deg,var(--accent),#7fd0ff);color:#00131a}
-    footer{margin-top:26px;color:var(--muted);text-align:center}
-    @media (prefers-color-scheme: light){
-      :root{--bg:#f7f9fc;--elev:#ffffffcc;--fg:#0b111a;--muted:#495469;--hairline:rgba(0,0,0,.06)}
-      section{box-shadow:0 8px 26px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.8)}
-      .btn:hover{background:rgba(0,0,0,.05)}
+    .privacy-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 40px;
+    }
+    
+    .page-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 8px;
+      text-align: left;
+    }
+    
+    .meta-info {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 0 0 32px;
+      line-height: 1.6;
+      text-align: left;
+    }
+    
+    .privacy-section {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      text-align: left;
+    }
+    
+    .privacy-section:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 10px;
+      text-align: left;
+    }
+    
+    .privacy-section p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 12px;
+    }
+    
+    .privacy-section p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .privacy-section ul {
+      margin: 12px 0;
+      padding-left: 24px;
+    }
+    
+    .privacy-section li {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 8px 0;
+    }
+    
+    .delete-account-section {
+      margin-top: 32px;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .delete-account-section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 12px;
+    }
+    
+    .delete-account-section p {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    
+    .delete-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .delete-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--accent-orange);
+    }
+    
+    .privacy-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    
+    @media (max-width: 640px) {
+      .privacy-container {
+        padding: 0 20px;
+        margin: 30px auto;
+      }
+      
+      .page-title {
+        font-size: 32px;
+      }
+      
+      .meta-info {
+        font-size: 13px;
+        margin-bottom: 30px;
+      }
+      
+      .section-title {
+        font-size: 20px;
+      }
+      
+      .delete-account-section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap row">
-      <div class="brand"><a href="/index.html">Hivest</a></div>
+    <div class="wrap nav">
+      <a href="/" class="brand">
+        <img src="assets/logo2.png" alt="Hivest logo" class="logo">
+        <span>Hivest</span>
+      </a>
       <nav class="links">
-        <a class="btn" href="/terms.html">Terms</a>
-        <a class="btn" href="/contact.html">Contact</a>
+        <a class="link" href="/terms.html">Terms</a>
+        <a class="link" href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div class="wrap">
-    <h1>Privacy Policy</h1>
-    <div class="meta" id="meta"></div>
+  <div class="privacy-container">
+    <h1 class="page-title">Privacy Policy</h1>
+    <div class="meta-info" id="meta"></div>
     <div id="content" aria-live="polite"></div>
 
-    <section>
+    <div class="delete-account-section">
       <h2>Delete Your Account</h2>
       <p>If you wish to delete your account and associated personal data, you can do so at any time.</p>
-      <div class="cta">
-        <a class="btn2" href="/delete.html">Go to Delete Account</a>
-      </div>
-    </section>
+      <a class="delete-btn" href="/delete.html">Go to Delete Account</a>
+    </div>
 
-    <footer>© <span id="company"></span></footer>
+    <div class="privacy-footer">© <span id="company"></span></div>
   </div>
 
   <script>
@@ -91,8 +203,9 @@
   $("#meta").textContent = `Last updated: ${LEGAL.privacy.lastUpdated} • ${LEGAL.meta.companyName} • ${LEGAL.meta.contactEmail} • ${LEGAL.meta.contactAddress}`;
   const root = $("#content");
   LEGAL.privacy.sections.forEach(sec=>{
-    const el=document.createElement("section");
-    const h2=document.createElement("h2"); h2.textContent=sec.title; el.appendChild(h2);
+    const el=document.createElement("div");
+    el.className="privacy-section";
+    const h2=document.createElement("h2"); h2.className="section-title"; h2.textContent=sec.title; el.appendChild(h2);
     (sec.paragraphs||[]).forEach(t=>{ const p=document.createElement("p"); p.textContent=t; el.appendChild(p); });
     if(sec.bullets&&sec.bullets.length){ const ul=document.createElement("ul"); sec.bullets.forEach(b=>{ const li=document.createElement("li"); li.textContent=b; ul.appendChild(li); }); el.appendChild(ul); }
     root.appendChild(el);

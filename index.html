@@ -1,5 +1,4 @@
 
-You said:
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,137 +7,302 @@ You said:
   <title>Hivest</title>
   <meta name="description" content="Your Investment Hive – The Social Network for Investors">
   <link rel="canonical" href="https://hivest.app/">
-  <style>
-    :root{
-      --bg:#06090f;
-      --fg:#f6f7fb;
-      --muted:#a9b3c3;
-      --accent:#4cafef;
-      --accent2:#1ee3c2;
-    }
-    *{box-sizing:border-box}
-    html,body{
-      margin:0;
-      background:radial-gradient(1200px 700px at 20% 0%, #0b1423 0%, #06090f 50%) no-repeat #06090f;
-      color:var(--fg);
-      font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-    }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1100px;margin:auto;padding:28px}
-    header{
-      position:sticky;
-      top:0;
-      z-index:10;
-      background:linear-gradient(180deg,#06090f 70%,#06090f00);
-      backdrop-filter:saturate(120%) blur(10px);
-    }
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-    .brand{
-      display:flex;
-      align-items:center;
-      font-weight:800;
-      letter-spacing:.2px;
-    }
-    .logo{
-      width:30px;
-      height:30px;
-      margin-right:8px;
-      border-radius:6px;
-    }
-    .links{display:flex;gap:12px;flex-wrap:wrap}
-    .link{padding:8px 10px;border-radius:10px}
-    .link:hover{background:rgba(255,255,255,.06)}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin-top:34px}
-    .title{margin:0 0 12px;font-size:48px;line-height:1.06;background:linear-gradient(90deg,var(--accent),#8ad6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .subtitle{margin:0;color:var(--muted);font-size:18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px 18px;
-      border-radius:16px;
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      color:#00131a;
-      font-weight:700;
-    }
-    .btn.secondary{
-      background:rgba(255,255,255,.06);
-      color:var(--fg);
-      font-weight:600;
-    }
-    .btn.secondary:hover{background:rgba(255,255,255,.1)}
-    .visual{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:220px;
-    }
-    .app-logo{
-      width:160px;
-      height:160px;
-      border-radius:32px;
-      box-shadow:0 20px 60px rgba(30,150,220,.35);
-    }
-    .features{margin:46px 0 10px}
-    .feat-title{margin:0 0 10px;font-weight:700;letter-spacing:.2px;color:#d8e2f1}
-    .list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0;padding:0;list-style:none}
-    .item{display:flex;gap:10px;align-items:flex-start;padding:10px 0}
-    .tick{width:8px;height:8px;border-radius:50%;margin-top:8px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-    .txt{color:var(--muted)}
-    footer{margin:54px 0 12px;color:var(--muted);text-align:center}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}.list{grid-template-columns:1fr 1fr}}
-    @media(max-width:640px){.title{font-size:36px}.list{grid-template-columns:1fr}}
-    @media(prefers-color-scheme:light){
-      :root{--fg:#0b111a;--muted:#495469}
-      html,body{background:radial-gradient(1200px 700px at 20% 0%, #f2f6ff 0%, #f7f9fc 60%) no-repeat #f7f9fc;color:var(--fg)}
-      .link:hover{background:rgba(0,0,0,.05)}
-      .btn.secondary{background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.06)}
-      .app-logo{box-shadow:0 20px 60px rgba(30,150,220,.25)}
-    }
-  </style>
+  <link rel="icon" href="assets/logoApp2.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <div class="brand">
-        <img src="logo2.png" alt="Hivest logo" class="logo">
+      <a href="/" class="brand">
+        <img src="assets/logo2.png" alt="Hivest logo" class="logo">
         <span>Hivest</span>
-      </div>
+      </a>
       <nav class="links">
-        <a class="link" href="/privacy.html">Privacy</a>
-        <a class="link" href="/terms.html">Terms</a>
-        <a class="link" href="/delete.html">Delete</a>
-        <a class="link" href="/contact.html">Contact</a>
+        <a class="link" href="/contact.html">Contact Us</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
     <section class="hero">
-      <div>
-        <h1 class="title">Your Investment Hive</h1>
-        <p class="subtitle">Invest smarter, together. Share insights, track portfolios, and climb the leaderboard in a social network built for investors.</p>
+      <div class="hero-content">
+        <h1 class="title">The Investment App to Finally Invest Together</h1>
+        <p class="subtitle">Social investing that actually works.</p>
+        
+        <div class="download-text">Download for free.</div>
+        
         <div class="cta">
-          <a class="btn" href="https://apps.apple.com/il/app/hivest/id6751804629" target="_blank" rel="noopener">Get on iPhone</a>
-          <a class="btn secondary" href="https://play.google.com/" target="_blank" rel="noopener">Android (soon)</a>
+          <a class="store-btn" href="https://apps.apple.com/il/app/hivest/id6751804629" target="_blank" rel="noopener">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1726531200" alt="Download on the App Store">
+          </a>
+          <a class="store-btn" href="https://play.google.com/" target="_blank" rel="noopener">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:50px">
+          </a>
+        </div>
+        
+        <div class="testimonial">
+          "After 3 weeks of using Hivest, my investment portfolio improved more than 5 years of investing alone. Amazing app!"
+          <span class="stars">★★★★★</span>
+          <div style="margin-top:8px;font-weight:700">– J.S.</div>
         </div>
       </div>
       <div class="visual">
-        <img src="logoApp2.png" alt="Hivest App Logo" class="app-logo">
+        <img src="assets/previewed.png" alt="Hivest App" class="phone-mockup">
+      </div>
+    </section>
+  </main>
+
+  <section class="why-section">
+    <div class="wrap">
+      <h2 class="section-title">Why Use Hivest?</h2>
+      <p class="section-subtitle">
+        Tired of investing alone? Build wealth together with a proven, community-based method. 
+        Share insights, learn from top investors, and make informed decisions without the guesswork.
+      </p>
+
+      <div class="features-container">
+        <div class="phones-showcase">
+          <img src="assets/previewed (1).png" alt="Hivest App Screens" class="app-phones">
+        </div>
+
+        <div class="features-list">
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Social Investment Feed</h3>
+            </div>
+            <p class="feature-text">
+              Follow top investors, see their trades in real-time, and learn from detailed analysis and insights. 
+              Share your own strategies and build your reputation in the community.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 13h2v6H3v-6zm4-4h2v10H7V9zm4-6h2v16h-2V3zm4 4h2v12h-2V7zm4 2h2v10h-2V9z"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Compete on Leaderboards</h3>
+            </div>
+            <p class="feature-text">
+              Track your performance against the community. Climb the rankings, discover top performers, 
+              and get recognized for your investment skills. Real portfolios, real competition.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-header">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 1C8.676 1 6 3.676 6 7v2H5c-1.105 0-2 .895-2 2v10c0 1.105.895 2 2 2h14c1.105 0 2-.895 2-2V11c0-1.105-.895-2-2-2h-1V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10c1.105 0 2 .895 2 2s-.895 2-2 2-2-.895-2-2 .895-2 2-2z"/>
+                </svg>
+              </div>
+              <h3 class="feature-title">Secure Portfolio Tracking</h3>
+            </div>
+            <p class="feature-text">
+              Connect your brokerage with read-only access. Your credentials stay safe, your data stays yours. 
+              Privacy-first design with reports, blocks, and easy deletion.
+            </p>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
-    <section class="features">
-      <h3 class="feat-title">Why Hivest</h3>
-      <ul class="list">
-        <li class="item"><span class="tick"></span><span class="txt">Safe by design with reports and blocks.</span></li>
-        <li class="item"><span class="tick"></span><span class="txt">Brokerage linking for read-only positions.</span></li>
-        <li class="item"><span class="tick"></span><span class="txt">Privacy first with easy deletion.</span></li>
-      </ul>
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="wrap">
+      <h2 class="section-title">What Users Say</h2>
+      <p class="section-subtitle">
+        Real investors sharing their experience with Hivest.
+      </p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-author">
+              <div class="author-initials">
+                <img src="assets/profiles/1.png" alt="Michael B.">
+              </div>
+              <div class="author-name">Michael B.</div>
+            </div>
+            <span class="testimonial-stars">★★★★★</span>
+          </div>
+          <p class="testimonial-text">
+            "Been trading for 3 years but always felt like I was guessing. Seeing what top performers are actually buying and their reasoning changed everything for me. Up 18% this quarter."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-author">
+              <div class="author-initials">
+                <img src="assets/profiles/2.png" alt="Hannah D.">
+              </div>
+              <div class="author-name">Hannah D.</div>
+            </div>
+            <span class="testimonial-stars">★★★★☆</span>
+          </div>
+          <p class="testimonial-text">
+            "The leaderboard concept is genius. Motivates me to research more before investing. Only wish there were more educational resources built in, but the community shares great insights."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-author">
+              <div class="author-initials">
+                <img src="assets/profiles/3.png" alt="David P.">
+              </div>
+              <div class="author-name">David P.</div>
+            </div>
+            <span class="testimonial-stars">★★★★★</span>
+          </div>
+          <p class="testimonial-text">
+            "Finally an investment app that's actually social. Following experienced investors helped me avoid some bad picks. The portfolio tracking with my TD Ameritrade account works flawlessly."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-author">
+              <div class="author-initials">
+                <img src="assets/profiles/4.png" alt="James M.">
+              </div>
+              <div class="author-name">James M.</div>
+            </div>
+            <span class="testimonial-stars">★★★★★</span>
+          </div>
+          <p class="testimonial-text">
+            "I was skeptical about sharing my portfolio publicly, but the privacy controls are solid. Love seeing real-time trades from people who consistently beat the market. Worth every penny."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-author">
+              <div class="author-initials">
+                <img src="assets/profiles/5.png" alt="Laura P.">
+              </div>
+              <div class="author-name">Laura P.</div>
+            </div>
+            <span class="testimonial-stars">★★★★</span>
+          </div>
+          <p class="testimonial-text">
+            "Great for learning by watching others. Interface is clean and the analytics are detailed. Sometimes the feed gets a bit noisy with too many posts, but filtering by top performers helps."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="testimonial-author">
+              <div class="author-initials">
+                <img src="assets/profiles/6.png" alt="Lucas F.">
+              </div>
+              <div class="author-name">Lucas F.</div>
+            </div>
+            <span class="testimonial-stars">★★★★★</span>
+          </div>
+          <p class="testimonial-text">
+            "Started investing 6 months ago with zero experience. Following the top 5 investors on Hivest taught me more than any book. My portfolio is finally in the green!"
+          </p>
+        </div>
+      </div>
+    </div>
     </section>
 
-    <footer>© Hivest Ltd.</footer>
-  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <a href="/contact.html" class="footer-link">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Contact Us
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <a href="/privacy.html" class="footer-link">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Privacy Policy
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <a href="/terms.html" class="footer-link">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Terms of Service
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <a href="/delete.html" class="footer-link">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="3 6 5 6 21 6"/>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              <line x1="10" y1="11" x2="10" y2="17"/>
+              <line x1="14" y1="11" x2="14" y2="17"/>
+            </svg>
+            Data Deletion
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Hivest Ltd.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll animation for testimonials
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all testimonial cards
+    document.querySelectorAll('.testimonial-card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Also observe feature cards
+    document.querySelectorAll('.feature-card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s ease-out';
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>

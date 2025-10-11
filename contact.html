@@ -1,59 +1,250 @@
-<!-- contact.html -->
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hivest – Contact Us</title>
-  <meta name="description" content="Get in touch with Hivest support." />
-  <link rel="canonical" href="https://hivest.app/contact.html" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us – Hivest</title>
+  <meta name="description" content="Get in touch with Hivest support.">
+  <link rel="canonical" href="https://hivest.app/contact.html">
+  <link rel="icon" href="assets/logoApp2.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
   <style>
-    :root{ --bg:#06090f; --elev:#0d1522cc; --fg:#f6f7fb; --muted:#a9b3c3; --accent:#4cafef; --hairline:rgba(255,255,255,.08); --radius:18px }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:760px;margin:auto;padding:28px}
-    header{position:sticky;top:0;background:linear-gradient(180deg,#06090f 60%,#06090f00);backdrop-filter:blur(8px);z-index:10}
-    .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--hairline)}
-    .brand{font-weight:800}
-    .btn{display:inline-flex;padding:8px 12px;border-radius:10px;background:transparent}
-    .btn:hover{background:rgba(255,255,255,.06)}
-    h1{margin:18px 0 12px;font-size:30px;background:linear-gradient(90deg,var(--accent),#7fd0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    section{background:var(--elev);border-radius:var(--radius);padding:20px;margin:14px 0;box-shadow:0 8px 26px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.04)}
-    .contact-info p{margin:4px 0}
-    .contact-info a{color:var(--accent)}
-    .contact-info a:hover{text-decoration:underline}
-    footer{margin-top:26px;color:var(--muted);text-align:center}
-    @media (prefers-color-scheme: light){
-      :root{--bg:#f7f9fc;--elev:#ffffffcc;--fg:#0b111a;--muted:#495469;--hairline:rgba(0,0,0,.06)}
-      section{box-shadow:0 8px 26px rgba(0,0,0,.08), inset 0 1px 0 rgba(255,255,255,.8)}
-      .btn:hover{background:rgba(0,0,0,.05)}
+    .contact-wrapper {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 40px;
+      min-height: calc(100vh - 400px);
+    }
+    
+    .contact-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .intro-text {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 24px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+      border-left: 3px solid rgba(255, 165, 0, 0.3);
+    }
+    
+    .page-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 4px;
+    }
+    
+    .page-subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0;
+      font-weight: 400;
+    }
+    
+    .contact-section {
+      margin-bottom: 16px;
+    }
+    
+    .contact-section:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255, 165, 0, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin: 0 0 8px;
+    }
+    
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      font-size: 16px;
+      color: var(--fg);
+    }
+    
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      color: var(--muted);
+      opacity: 0.5;
+    }
+    
+    .contact-link {
+      color: var(--fg);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .contact-link:hover {
+      color: var(--accent-orange);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 165, 0, 0.8);
+      transform: translateY(-3px);
+    }
+    
+    .social-icon {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+    }
+    
+    .contact-footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 30px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    
+    @media (max-width: 968px) {
+      .contact-wrapper {
+        padding: 0 30px;
+        margin: 30px auto;
+        min-height: auto;
+      }
+      
+      .page-title {
+        font-size: 36px;
+      }
+      
+      .page-subtitle {
+        font-size: 16px;
+      }
+      
+      .intro-text {
+        font-size: 15px;
+        padding: 16px;
+      }
+      
+      .contact-section {
+        margin-bottom: 24px;
+      }
+      
+      .social-links {
+        flex-direction: column;
+      }
+      
+      .social-link {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .contact-footer {
+        margin-top: 30px;
+        padding-top: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap row">
-      <div class="brand"><a href="/index.html">Hivest</a></div>
-      <a class="btn" href="/privacy.html">Privacy</a>
+    <div class="wrap nav">
+      <a href="/index.html" class="brand">
+        <img src="assets/logo2.png" alt="Hivest logo" class="logo">
+        <span>Hivest</span>
+      </a>
+      <nav class="links">
+        <a class="link" href="/index.html">Home</a>
+      </nav>
     </div>
   </header>
 
-  <div class="wrap">
-    <h1>Contact Us</h1>
+  <div class="contact-wrapper">
+    <div class="contact-content">
+      <div>
+        <h1 class="page-title">Contact Us</h1>
+        <p class="page-subtitle">Get in touch with our team</p>
+      </div>
 
-    <section>
-      <h2>Have a question?</h2>
-      <p>We'd love to help. You can reach us via email or at our office address.</p>
-    </section>
+      <p class="intro-text">
+        We're a young startup at the beginning of our journey, building Hivest with passion and dedication. Your feedback, suggestions, and experiences matter to us — they help shape the future of our platform. Whether you have questions, ideas, or just want to share your thoughts, we'd love to hear from you.
+      </p>
 
-    <section class="contact-info">
-      <h2>Contact Details</h2>
-      <p><strong>Email:</strong> <a href="mailto:support@hivest.app">support@hivest.app</a></p>
-      <p><strong>Address:</strong> Hakovsim 45, Tel Aviv, Israel</p>
-    </section>
+      <div class="contact-section">
+        <div class="section-label">Support</div>
+        <div class="contact-detail">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:support@hivest.app" class="contact-link">support@hivest.app</a>
+        </div>
+      </div>
 
-    <footer>© Hivest Ltd.</footer>
+      <div class="contact-section">
+        <div class="section-label">Office</div>
+        <div class="contact-detail">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Hakovsim 45, Tel Aviv, Israel</span>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <div class="section-label">Follow Us</div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/eyal.porat/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/in/porateyal/" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://www.tiktok.com/@hivest.app?_t=ZS-90SvK0mN4HU&_r=1" target="_blank" rel="noopener noreferrer" class="social-link">
+            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+            </svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-footer">
+      © 2025 Hivest Ltd.
+    </div>
   </div>
 </body>
 </html>
