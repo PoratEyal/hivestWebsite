@@ -1,14 +1,28 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hivest</title>
-  <meta name="description" content="Your Investment Hive – The Social Network for Investors">
+  <meta name="description" content="Invest Smarter — Together. Hivest is the social network for real investors building wealth as a community.">
   <link rel="canonical" href="https://hivest.app/">
   <link rel="icon" href="assets/logoApp2.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hero .title{font-size:2.6rem;line-height:1.15;letter-spacing:-0.01em}
+    @media (min-width:1024px){.hero .title{font-size:3.2rem}}
+    @media (max-width:768px){.hero .title{font-size:2.1rem}}
+
+    .nav .nav-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#000;color:#fff;text-decoration:none;
+      padding:10px 18px;border-radius:10px;border:1px solid #111;
+      font-weight:600;transition:transform .06s ease,background .2s ease
+    }
+    .nav .nav-btn:hover{background:#222}
+    .nav .nav-btn:active{transform:translateY(1px)}
+    .nav .links{display:flex;gap:10px;align-items:center}
+  </style>
 </head>
 <body>
   <header>
@@ -18,7 +32,8 @@
         <span>Hivest</span>
       </a>
       <nav class="links">
-        <a class="link" href="/contact.html">Contact Us</a>
+        <a class="nav-btn" href="/contact.html">Contact Us</a>
+        <a class="nav-btn" href="https://apps.apple.com/il/app/hivest/id6751804629" target="_blank" rel="noopener">Get the App</a>
       </nav>
     </div>
   </header>
@@ -27,21 +42,21 @@
     <section class="hero">
       <div class="hero-content">
         <h1 class="title">The Investment App to Finally Invest Together</h1>
-        <p class="subtitle">Social investing that actually works.</p>
-        
-        <div class="download-text">Download for free.</div>
-        
+        <p class="subtitle">Real people. Real portfolios. Real results.</p>
+
+        <div class="download-text">Start building wealth today — it’s free.</div>
+
         <div class="cta">
           <a class="store-btn" href="https://apps.apple.com/il/app/hivest/id6751804629" target="_blank" rel="noopener">
             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1726531200" alt="Download on the App Store">
           </a>
-          <a class="store-btn" href="https://play.google.com/" target="_blank" rel="noopener">
+          <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.hivest.mobile" target="_blank" rel="noopener">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" style="height:50px">
           </a>
         </div>
-        
+
         <div class="testimonial">
-          "After 3 weeks of using Hivest, my investment portfolio improved more than 5 years of investing alone. Amazing app!"
+          "After just a few weeks on Hivest, I finally understood how great investors think. My returns — and confidence — skyrocketed."
           <span class="stars">★★★★★</span>
           <div style="margin-top:8px;font-weight:700">– J.S.</div>
         </div>
@@ -54,10 +69,9 @@
 
   <section class="why-section">
     <div class="wrap">
-      <h2 class="section-title">Why Use Hivest?</h2>
+      <h2 class="section-title">Why Hivest?</h2>
       <p class="section-subtitle">
-        Tired of investing alone? Build wealth together with a proven, community-based method. 
-        Share insights, learn from top investors, and make informed decisions without the guesswork.
+        Investing doesn’t have to be lonely. Hivest connects you with real investors sharing real portfolios — so you can learn, grow, and win together.
       </p>
 
       <div class="features-container">
@@ -76,8 +90,7 @@
               <h3 class="feature-title">Social Investment Feed</h3>
             </div>
             <p class="feature-text">
-              Follow top investors, see their trades in real-time, and learn from detailed analysis and insights. 
-              Share your own strategies and build your reputation in the community.
+              Follow top investors, see their trades and insights as they happen, and share your own strategies. Build your track record and grow your influence in the hive.
             </p>
           </div>
 
@@ -91,8 +104,7 @@
               <h3 class="feature-title">Compete on Leaderboards</h3>
             </div>
             <p class="feature-text">
-              Track your performance against the community. Climb the rankings, discover top performers, 
-              and get recognized for your investment skills. Real portfolios, real competition.
+              Climb the ranks, prove your skills, and earn recognition for your performance. Real portfolios. Real competition. Real rewards.
             </p>
           </div>
 
@@ -106,22 +118,18 @@
               <h3 class="feature-title">Secure Portfolio Tracking</h3>
             </div>
             <p class="feature-text">
-              Connect your brokerage with read-only access. Your credentials stay safe, your data stays yours. 
-              Privacy-first design with reports, blocks, and easy deletion.
+              Track all your investments in one place — safely. Connect your brokerage with read-only access. Your credentials stay private, your data stays yours.
             </p>
           </div>
         </div>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-  <!-- Testimonials Section -->
   <section class="testimonials-section">
     <div class="wrap">
       <h2 class="section-title">What Users Say</h2>
-      <p class="section-subtitle">
-        Real investors sharing their experience with Hivest.
-      </p>
+      <p class="section-subtitle">Real investors sharing their experiences with Hivest.</p>
 
       <div class="testimonials-grid">
         <div class="testimonial-card">
@@ -135,7 +143,7 @@
             <span class="testimonial-stars">★★★★★</span>
           </div>
           <p class="testimonial-text">
-            "Been trading for 3 years but always felt like I was guessing. Seeing what top performers are actually buying and their reasoning changed everything for me. Up 18% this quarter."
+            "I’ve been trading for 3 years, but always felt like I was guessing. Seeing real portfolios from top performers changed everything. Up 18% this quarter."
           </p>
         </div>
 
@@ -150,7 +158,7 @@
             <span class="testimonial-stars">★★★★☆</span>
           </div>
           <p class="testimonial-text">
-            "The leaderboard concept is genius. Motivates me to research more before investing. Only wish there were more educational resources built in, but the community shares great insights."
+            "The leaderboard keeps me motivated. I research more, learn faster, and actually enjoy investing now. The community’s insights are gold."
           </p>
         </div>
 
@@ -165,7 +173,7 @@
             <span class="testimonial-stars">★★★★★</span>
           </div>
           <p class="testimonial-text">
-            "Finally an investment app that's actually social. Following experienced investors helped me avoid some bad picks. The portfolio tracking with my TD Ameritrade account works flawlessly."
+            "Finally an app that makes investing social. Following skilled investors helped me avoid bad trades. Syncing my TD Ameritrade account was seamless."
           </p>
         </div>
 
@@ -180,7 +188,7 @@
             <span class="testimonial-stars">★★★★★</span>
           </div>
           <p class="testimonial-text">
-            "I was skeptical about sharing my portfolio publicly, but the privacy controls are solid. Love seeing real-time trades from people who consistently beat the market. Worth every penny."
+            "I was hesitant to share my portfolio, but the privacy controls are rock solid. Seeing trades from consistent winners keeps me sharp."
           </p>
         </div>
 
@@ -195,7 +203,7 @@
             <span class="testimonial-stars">★★★★</span>
           </div>
           <p class="testimonial-text">
-            "Great for learning by watching others. Interface is clean and the analytics are detailed. Sometimes the feed gets a bit noisy with too many posts, but filtering by top performers helps."
+            "Perfect for learning by watching others. The interface is clean, analytics are deep, and filtering by top performers saves time."
           </p>
         </div>
 
@@ -210,14 +218,13 @@
             <span class="testimonial-stars">★★★★★</span>
           </div>
           <p class="testimonial-text">
-            "Started investing 6 months ago with zero experience. Following the top 5 investors on Hivest taught me more than any book. My portfolio is finally in the green!"
+            "Started with zero investing experience. Following the top 5 on Hivest taught me more than any book. My portfolio’s finally in the green!"
           </p>
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -277,32 +284,10 @@
   </footer>
 
   <script>
-    // Scroll animation for testimonials
-    const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all testimonial cards
-    document.querySelectorAll('.testimonial-card').forEach(card => {
-      observer.observe(card);
-    });
-
-    // Also observe feature cards
-    document.querySelectorAll('.feature-card').forEach(card => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      card.style.transition = 'all 0.6s ease-out';
-      observer.observe(card);
-    });
+    const observerOptions={threshold:0.2,rootMargin:'0px 0px -50px 0px'};
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');}});},observerOptions);
+    document.querySelectorAll('.testimonial-card').forEach(card=>{observer.observe(card);});
+    document.querySelectorAll('.feature-card').forEach(card=>{card.style.opacity='0';card.style.transform='translateY(30px)';card.style.transition='all 0.6s ease-out';observer.observe(card);});
   </script>
 </body>
 </html>
